@@ -38,10 +38,10 @@ def upload_file():
     rawBytes = io.BytesIO()	
     image.save(rawBytes, "PNG")	
     rawBytes.seek(0)	
-    image2_b64 = base64.b64encode(rawBytes.read()).decode('utf-8')
+    image3_b64 = base64.b64encode(rawBytes.read()).decode('utf-8')
 
 
-    return render_template("colorize.html", file1=image1_b64, file2=image2_b64)
+    return render_template("colorize.html", file1=image1_b64, file2=image3_b64)
 
 
 if __name__ == '__main__':
